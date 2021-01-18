@@ -1,0 +1,15 @@
+<div class="main-pro-mid">
+    <?php 
+        for ($i=1; $i <= 3; $i++) { 
+    ?>
+    <div class="mid-ele">
+        <div class="mid-ele-image">
+            <?php 
+                echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('promotion-mid-'.$i)->toHtml();
+            ?>
+        </div>
+    </div>
+    <?php
+        }
+    ?>
+</div>

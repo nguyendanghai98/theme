@@ -1,0 +1,110 @@
+@media only screen and (min-width: 1920px) {
+    .header.content {
+        .checkout {
+            .mixin-checkout(200px);
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+    .header.content {
+        .checkout {
+            .mixin-checkout(180px);
+        }
+        .minicart-wrapper {
+            position: absolute;
+            right: 16%;
+        }
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+    .header.content {
+        .checkout {
+            .mixin-checkout(150px);
+        }
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .header.content {
+        .checkout {
+            .mixin-checkout(120px);
+        }
+        .minicart-wrapper {
+            position: absolute;
+            right: 20%;
+            top: 0;
+        }
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
+    .logo img {
+        margin-top: 0px;
+        width: 50%;
+    }
+    .header.content {
+        .checkout {
+            position: absolute;
+            top: 14%;
+            right: 10%;
+            button.btncheckout {
+                width: 100px;
+                background-color:#8cb859;
+                padding: 10px 0;
+            }
+            a {
+                color:#ffffff;
+                font-size: 16px;
+                font-weight: 600;
+                font-family: @font-opensans-semibold;
+            }
+        }
+        .minicart-wrapper {
+            position: absolute;
+            right: 33%;
+        }
+    }
+}
+@media only screen and (max-width: 639px) {
+    .logo img {
+        margin-top: 0px;
+        width: 50%;
+    }
+    .header.content {
+        .checkout {
+            position: absolute;
+            top: 14%;
+            right: 11%;
+            button.btncheckout {
+                width: 100px;
+                background-color:#8cb859;
+                padding: 10px 0;
+            }
+            a {
+                color:#ffffff;
+                font-size: 16px;
+                font-weight: 600;
+                font-family: @font-opensans-semibold;
+            }
+        }
+        .minicart-wrapper {
+            position: absolute;
+            right: 44%;
+            top: 0;
+        }
+    }
+}
+@media only screen and (max-width: 479px) {
+    .header.content {
+        .checkout {
+            right: 15%;
+            button.btncheckout {
+                width: 80px;
+            }
+        }
+        .minicart-wrapper {
+            position: absolute;
+            right: 44%;
+            top: 0;
+        }
+    }
+}

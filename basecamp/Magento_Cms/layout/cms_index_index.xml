@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="page.wrapper">
+            <!-- <container name="home.page.main.banner.section" htmlTag="section" htmlClass="home-page-main-banner-section" before="main.content">
+                <block class="Magento\Framework\View\Element\Template" name="policy_name" template="Magento_Cms::policy.phtml"/> 
+                
+            </container> -->
+        </referenceContainer>
+
+        <referenceContainer name="main">
+            <block class="Magento\Framework\View\Element\Template" name="main_content_image" template="Magento_Cms::main_content_image.phtml" before="-"/>
+            <block class="Magento\Framework\View\Element\Template" name="main_content_logo" template="Magento_Cms::main_content_logo.phtml" after ="main-content-image"/>
+            <block class="Magento\Framework\View\Element\Template" name="main_content_slide_top" template="Magento_Cms::main_content_slide1.phtml" after="main-content-logo"/>
+            <block class="Magento\Framework\View\Element\Template" name="main_promotion_top" template="Magento_Cms::main_promotion_top.phtml" after="main-content-slide1"/>
+            <block class="Magento\Framework\View\Element\Template" name="main_promotion_mid" template="Magento_Cms::main_promotion_mid.phtml" after="main-promotion-top"/>
+            <block class="Magento\Framework\View\Element\Template" name="main_promotion_bot" template="Magento_Cms::main_promotion_bot.phtml" after="main-promotion-mid"/>
+            <block class="Magento\Framework\View\Element\Template" name="intro_product" template="Magento_Cms::intro_product.phtml" after="main-promotion-bot"/>
+            <block class="Magento\Framework\View\Element\Template" name="demo_widgets" template="Magento_Cms::widgets.phtml" after="intro-product"/>
+        </referenceContainer>
+        <referenceContainer name="page.bottom.container">
+            <block class="Magento\Framework\View\Element\Template" name="demo_blog" template="Magento_Cms::blog.phtml" />
+        </referenceContainer>
+    </body>
+</page>

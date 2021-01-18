@@ -1,0 +1,98 @@
+<div class="main-slide1">
+    <?php 
+        for ($i=1; $i <= 5; $i++) { 
+    ?>
+    <div class="slide-ele">
+        <div class="slide-ele-image">
+            <?php 
+                echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('main-slide-top-'.$i)->toHtml();
+            ?>
+        </div>
+
+        <div class="slide-ele-text">
+            <?php 
+                echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('slide-top-text-'.$i)->toHtml();
+            ?>
+        </div>
+    </div>
+
+    <?php
+        }
+    ?>
+</div>
+<script>
+require([
+    'jquery',
+    'slick'
+], function($) {
+    $(document).ready(function() {
+        $('.main-slide1').slick({
+            dots: true,
+            infinite: false,
+            speed: 300,
+            arrows: false,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            responsive: [{
+                    breakpoint: 1817,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                        speed: 300,
+                        infinite: true,
+                        dots: false,
+                        arrows: false,
+                    }
+                }, {
+                    breakpoint: 1440,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        dots: false,
+                        arrows: false,
+                    }
+                },
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        dots: false,
+                        arrows: false,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        dots: false,
+                        arrows: false,
+                    }
+                },
+                {
+                    breakpoint: 640,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        dots: false,
+                        arrows: false,
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        dots: false,
+                        arrows: false,
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+    });
+});
+</script>

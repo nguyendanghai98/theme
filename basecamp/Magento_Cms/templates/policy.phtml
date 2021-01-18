@@ -1,0 +1,28 @@
+<div class="policy">
+    <?php 
+        for ($i=1; $i <= 4; $i++) { 
+    ?>
+    <div class="policy-ele">
+        <div class="policy-ele-icon">
+            <?php 
+                echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('policy-icon-'.$i)->toHtml();
+            ?>
+        </div>
+        <a href="">
+            <div class="policy-ele-text">
+                <?php 
+                    echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('policy-'.$i)->toHtml();
+                ?>
+            </div>
+        </a>
+    </div>
+
+    <?php
+        }
+    ?>
+    <!-- <div class="policy1-ele">
+        <?php 
+            echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('policy')->toHtml();
+        ?>
+    </div> -->
+</div>

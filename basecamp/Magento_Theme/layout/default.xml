@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <move element="breadcrumbs" destination="columns.top" before="-"/>
+        <!-- <move element="product_list_toolbar" destination="columns.top" after="-"/> -->
+        <referenceBlock class="Magento\Customer\Block\Account\Navigation" name="top.links">
+            <referenceBlock name="header" remove="true" />
+            <referenceBlock name="register-link" remove="true" />
+            <referenceBlock name="authorization-link" remove="true" />
+            <block class="Magento\Framework\View\Element\Template" name="contact_name" template="Magento_Theme::contact.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="call_name" template="Magento_Theme::call.phtml"/>                
+        </referenceBlock>
+        <referenceBlock class="Magento\Framework\View\Element\Template" name="page.top">
+        
+        </referenceBlock>
+        <referenceBlock class="Magento\Framework\View\Element\Template" name="content.top" >
+            
+        </referenceBlock>
+        <referenceContainer name="page.wrapper">
+            <container name="home.page.main.banner.section" htmlTag="section" htmlClass="home-page-main-banner-section" before="main.content">
+                <block class="Magento\Framework\View\Element\Template" name="policy_name" template="Magento_Theme::policy.phtml"/>
+            </container>
+        </referenceContainer>
+        <referenceContainer name="footer-container">
+            <container name="footer" as="footer" label="Page Footer" htmlTag="div" htmlClass="footer content">
+                <block class="Magento\Store\Block\Switcher" name="store_switcher" as="store_switcher" template="Magento_Store::switch/stores.phtml"/>
+                <block class="Magento\Framework\View\Element\Html\Links" name="footer_links">
+
+                </block>
+            </container>
+            <block class="Magento\Framework\View\Element\Template" name="footer_link" template="Magento_Theme::footer_link.phtml" before="-"/>
+            <block class="Magento\Framework\View\Element\Template" name="footer_logo" template="Magento_Theme::footer_logo.phtml" after="footer-link"/>
+        </referenceContainer>
+    </body>
+
+</page> 

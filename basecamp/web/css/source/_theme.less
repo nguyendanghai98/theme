@@ -1,0 +1,180 @@
+@font-caveat-brush:'CaveatBrush';
+@font-opensans-bold:'OpenSans-Bold';
+@font-opensans-extra:'OpenSans-ExtraBoldItalic';
+@font-opensans-regular:'OpenSans-Regular';
+@font-opensans-semibold:'OpenSans-SemiBold';
+@font-dejavu:'DejaVuSans-Book';
+//header
+.mixin-block-search(@width,@left) {
+    position: absolute;
+    width: @width;
+    left: @left;
+    top: 0%;
+}
+.mixin-policy(@width) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #e2e1e1;   
+    .policy-ele {
+        justify-content: center;
+        display: flex;
+        margin: auto;
+        padding-top: 13px;
+        .policy-ele-text {
+            width: @width;
+            margin-left: 10px;
+        }
+        a {
+            color: #45515d;
+            font-family: @font-opensans-regular;
+            font-size: 14px;
+            font-weight: 700;
+        }
+    }
+}
+.mixin-checkout(@width) {
+    position: absolute;
+    top: -3px;
+    right: 0;
+    button.btncheckout {
+        width: @width;
+        background-color:#8cb859;
+        padding: 10px 0;
+    }
+    a {
+        color:#ffffff;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: @font-opensans-semibold;
+    }
+}
+.main-top-link(@fonts,@lineh,@t,@l) {
+    position: absolute;
+    left: @l;
+    top: @t;
+    line-height: @lineh;
+    transform: rotate(-5deg);
+    a {
+        color:#ec2f67;
+        font-family: @font-caveat-brush;
+        font-size: @fonts;     
+    }
+}
+.main-top-text (@fonts,@lineh,@t,@l){
+    font-size: @fonts;
+    letter-spacing: -4px;
+    line-height: @lineh;
+    color: #ffffff;
+    transform: rotate(-4deg);
+    font-weight: 400;
+    font-family: 'CaveatBrush';
+    top: @t;
+    position: absolute;
+    left: @l;
+}
+//main content
+.slide-text {
+    position: absolute;
+    left: 40%;
+    transform: translateX(-50%);
+    top: 40%;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 48px;
+    letter-spacing: -1px;
+    font-family: @font-opensans-extra;
+}
+.main-pro-text(@fontsize,@top,@left,@font){
+    font-size: @fontsize;
+    letter-spacing: -4px;
+    line-height: 50px;
+    color: #ffffff;
+    transform: rotate(-4deg);
+    font-weight: 400;
+    font-family: @font;
+    top: @top;
+    position: absolute;
+    left: @left;
+}
+.main-pro-link(@color,@top,@left){
+    font-size: 40px;
+    letter-spacing: -4px;
+    line-height: 31px;
+    color: @color;
+    transform: rotate(-4deg);
+    font-weight: 400;
+    font-family: @font-caveat-brush;
+    top: @top;
+    position: absolute;
+    left: @left;
+}
+.intro-p(@lineh){
+    font-size: 20px;
+    line-height: @lineh;
+    color: #000000;
+    font-weight: 400;
+    font-family: @font-opensans-regular;
+}
+// blog
+.blog-t {
+    text-align: center;
+    font-size: 24px;
+    color: #000000;
+    font-weight: 700;
+    font-family: @font-opensans-bold;
+    padding: 20px 0;
+}
+.blog-child-p {
+    font-size: 20px;
+    color: #000000;
+    font-weight: 700;
+    font-family: @font-opensans-bold;
+}
+.blog-p {
+    font-size: 16px;
+    color: #000000;
+    font-weight: 400;
+    font-family: @font-opensans-regular;
+}
+.blog-a {
+    font-size: 14px;
+    color: #000000;
+    font-weight: 700;
+    font-family: @font-opensans-bold;
+}
+//footer
+.footer-first {
+    font-size: 22px;
+    color: #ff3e02;
+    font-weight: 700;
+    font-family: @font-opensans-bold;
+}
+.footer-p {
+    font-size: 18px;
+    color: #f4f4f4;
+    font-weight: 400;
+    font-family: @font-opensans-regular;  
+}
+// product details
+.mixin-product-info(@fonts,@color,@letter) {
+    font-size: @fonts;
+    letter-spacing: @letter;
+    line-height: 4px;
+    color: @color;
+    font-weight: 400;
+    font-family: @font-opensans-regular;
+}
+.mixin-pro-details(@fonts,@color) {
+    font-size: @fonts;
+    color: @color;
+    font-weight: 600;
+    text-align: center;
+    font-family: @font-opensans-semibold;
+}
+.mixin-pro-content(@fonts,@color) {
+    font-size: @fonts;
+    color: @color;
+    font-weight: 400;
+    font-family: @font-opensans-regular;
+}

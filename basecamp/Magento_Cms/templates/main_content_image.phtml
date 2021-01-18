@@ -1,0 +1,37 @@
+<div class="main-top">
+    <div class="images">
+        <?php
+            echo $block->getLayout()
+
+                ->createBlock('Magento\Cms\Block\Block')
+
+                ->setBlockId('main-content-top')
+
+                ->toHtml();
+        ?>
+    </div>
+    <div class="text">
+        <?php
+            echo $block->getLayout()
+
+                ->createBlock('Magento\Cms\Block\Block')
+
+                ->setBlockId('main-content-text')
+
+                ->toHtml();
+        ?>
+    </div>
+    <div class="link">
+        <a href="">
+            <?php
+                echo $block->getLayout()
+
+                    ->createBlock('Magento\Cms\Block\Block')
+
+                    ->setBlockId('main-content-link')
+
+                    ->toHtml();
+            ?>
+        </a>
+    </div>
+</div>

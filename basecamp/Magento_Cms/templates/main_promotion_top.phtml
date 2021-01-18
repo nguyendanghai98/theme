@@ -1,0 +1,15 @@
+<div class="main-pro-top">
+    <?php 
+        for ($i=1; $i <= 2; $i++) { 
+    ?>
+    <div class="top-ele">
+        <div class="top-ele-image">
+            <?php 
+                echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('promotion-top-'.$i)->toHtml();
+            ?>
+        </div>
+    </div>
+    <?php
+        }
+    ?>
+</div>

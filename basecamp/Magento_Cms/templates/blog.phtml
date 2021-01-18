@@ -1,0 +1,18 @@
+<div class="blog">
+    <div class="blog-title">News</div>
+    <div class="main-blog">
+        <?php 
+            for ($i=1; $i <= 3; $i++) { 
+        ?>
+        <div class=<?="blog-ele-".$i?>>
+            <div class=<?="blog-content-".$i?>>
+                <?php 
+                    echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('blog-'.$i)->toHtml();
+                ?>
+            </div>
+        </div>
+        <?php
+            }
+        ?>
+    </div>
+</div>
